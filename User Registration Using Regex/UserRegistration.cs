@@ -20,7 +20,7 @@ namespace User_Registration_Using_Regex
         }
         public bool validateEmail(String email)
         {
-            return Regex.IsMatch(email, NAME_PATTERN);
+            return Regex.IsMatch(email, EMAIL_PATTERN);
         }
     }
 }
