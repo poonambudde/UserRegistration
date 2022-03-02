@@ -13,7 +13,6 @@ namespace User_Registration_Using_Regex
             string firstName = Console.ReadLine();
             UserRegistration userRegistration = new UserRegistration();
             Console.WriteLine(userRegistration.validateFirstName(firstName));
-
         }
     }
 }
