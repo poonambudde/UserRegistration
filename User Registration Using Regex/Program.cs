@@ -10,7 +10,6 @@ namespace User_Registration_Using_Regex
 
             UserRegistration userRegistration = new UserRegistration();
 
-            Console.WriteLine("Note: name starts with Cap and has minimun 3 characters");
             Console.WriteLine("Enter the first name = ");
             string firstName = Console.ReadLine();
             Console.WriteLine(userRegistration.validateFirstName(firstName));
