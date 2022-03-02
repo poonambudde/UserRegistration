@@ -16,12 +16,10 @@ namespace User_Registration_Using_Regex
             Console.WriteLine(userRegistration.validateFirstName(firstName));
             Console.WriteLine("Enter the last name = ");
             string lastName = Console.ReadLine();
-            Console.WriteLine(userRegistration.validateLastName(lastName));            
-            Console.WriteLine("Enter the first name = ");
-            Console.WriteLine("Note: First name starts with Cap and has minimun 3 characters");
-            string firstName = Console.ReadLine();
-            UserRegistration userRegistration = new UserRegistration();
-            Console.WriteLine(userRegistration.validateFirstName(firstName));
+            Console.WriteLine(userRegistration.validateLastName(lastName));
+            Console.WriteLine("Enter the email = ");
+            string email = Console.ReadLine();
+            Console.WriteLine(userRegistration.validateEmail(email));
         }
     }
 }
