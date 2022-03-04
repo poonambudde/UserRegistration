@@ -6,7 +6,6 @@ namespace User_Registration_Using_Regex
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Welcome to User Registration Programs using Regex");
 
             UserRegistration userRegistration = new UserRegistration();
