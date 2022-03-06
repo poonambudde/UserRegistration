@@ -23,8 +23,8 @@ namespace User_Registration_Using_Regex
             Console.WriteLine(userRegistration.ValidateEmail(email));
 
             Console.WriteLine("Enter the phoneNumber = ");
-            string mobileNoFormat = Console.ReadLine();
-            Console.WriteLine(userRegistration.ValidateMobileNoFormat(mobileNoFormat));
+            string phoneNumber = Console.ReadLine();
+            Console.WriteLine(userRegistration.ValidateMobileNoFormat(phoneNumber));
 
             Console.WriteLine("Enter the password = ");
             string password = Console.ReadLine();
