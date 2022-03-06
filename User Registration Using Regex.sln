@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User Registration Using Regex", "User Registration Using Regex\User Registration Using Regex.csproj", "{B852E2E0-314B-4F32-8E3F-61A6CF09E3BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User Registration Using Regex", "User Registration Using Regex\User Registration Using Regex.csproj", "{B852E2E0-314B-4F32-8E3F-61A6CF09E3BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User Registration Using MSTest", "User Registration Using MSTest\User Registration Using MSTest.csproj", "{C19B8978-FBC1-4CC3-B8AB-3AA6BA3D136E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B852E2E0-314B-4F32-8E3F-61A6CF09E3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B852E2E0-314B-4F32-8E3F-61A6CF09E3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B852E2E0-314B-4F32-8E3F-61A6CF09E3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19B8978-FBC1-4CC3-B8AB-3AA6BA3D136E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19B8978-FBC1-4CC3-B8AB-3AA6BA3D136E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19B8978-FBC1-4CC3-B8AB-3AA6BA3D136E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19B8978-FBC1-4CC3-B8AB-3AA6BA3D136E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
