@@ -15,7 +15,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = false;
             //Act
-            var actual = userRegistration.ValidateFirstName(firstName);
+            bool actual = userRegistration.ValidateFirstName(firstName);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -27,7 +27,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = true;
             //Act
-            var actual = userRegistration.ValidateFirstName(firstName);
+            bool actual = userRegistration.ValidateFirstName(firstName);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -41,7 +41,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = false;
             //Act
-            var actual = userRegistration.ValidateLastName(lastName);
+            bool actual = userRegistration.ValidateLastName(lastName);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -53,7 +53,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = true;
             //Act
-            var actual = userRegistration.ValidateLastName(lastName);
+            bool actual = userRegistration.ValidateLastName(lastName);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -67,7 +67,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = false;
             //Act
-            var actual = userRegistration.ValidateEmail(Email);
+            bool actual = userRegistration.ValidateEmail(Email);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -79,7 +79,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = true;
             //Act
-            var actual = userRegistration.ValidateEmail(Email);
+            bool actual = userRegistration.ValidateEmail(Email);
             //Assert         
             Assert.AreEqual(expected, actual);
         }
@@ -93,7 +93,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = false;
             //Act
-            var actual = userRegistration.ValidateMobileNoFormat(phoneNumber);
+            bool actual = userRegistration.ValidateMobileNoFormat(phoneNumber);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -105,7 +105,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = true;
             //Act
-            var actual = userRegistration.ValidateMobileNoFormat(phoneNumber);
+            bool actual = userRegistration.ValidateMobileNoFormat(phoneNumber);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -119,7 +119,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = false;
             //Act
-            var actual = userRegistration.ValidatePassword(Password);
+            bool actual = userRegistration.ValidatePassword(Password);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -131,7 +131,7 @@ namespace User_Registration_Using_MSTest
             UserRegistration userRegistration = new UserRegistration();
             bool expected = true;           
             //Act
-            var actual = userRegistration.ValidatePassword(Password);
+            bool actual = userRegistration.ValidatePassword(Password);
             //Assert
             Assert.AreEqual(expected, actual);
         }
