@@ -129,7 +129,7 @@ namespace User_Registration_Using_MSTest
             //Arrange
             string Password = "Pass@123";
             UserRegistration userRegistration = new UserRegistration();
-            bool expected = true;           
+            bool expected = true;
             //Act
             bool actual = userRegistration.ValidatePassword(Password);
             //Assert

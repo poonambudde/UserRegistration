@@ -15,7 +15,7 @@ namespace User_Registration_Using_Regex
             Console.WriteLine(userRegistration.ValidateFirstName(firstName));
 
             Console.WriteLine("Enter the last name = ");
-            string lastName = Console.ReadLine();
+            string lastName = Console.ReadLine();                          
             Console.WriteLine(userRegistration.ValidateLastName(lastName));
 
             Console.WriteLine("Enter the email = ");
@@ -27,8 +27,9 @@ namespace User_Registration_Using_Regex
             Console.WriteLine(userRegistration.ValidateMobileNoFormat(phoneNumber));
 
             Console.WriteLine("Enter the password = ");
-            string password = Console.ReadLine();
+            string password = Console.ReadLine(); 
             Console.WriteLine(userRegistration.ValidatePassword(password));
+
         }
     }
 }
