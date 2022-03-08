@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -7,19 +7,34 @@ namespace User_Registration_Using_Regex
 {
     class UserRegistration
     {
-        const string EMAIL_PATTERN = "^[a-z]{2,}[-.+]{1}[0-1]{3}[@]{1}[a-z]{2,5}[.]{1}[a-z]{1,}$";
+        public static string NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
+        public static string EMAIL_PATTERN = @"^[A-Za-z0-9]{3,}([\.\-\+][A-Za-z0-9]{3,})?[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,}([.][a-zA-Z]{2,})?$";
+        public static string MOBILENOFORMAT_PATTERN = "^[0-9]{2}[ ][0-9]{10}$";
+        public static string PASSWORD_PATTERN = "^[A-Z]{1}[a-z]{3,}[@][0-9]{1,}";
 
-        public bool ValidateEmail(string email)
+        public bool ValidateFirstName(String firstName)
         {
-            var result = Regex.Match(email, EMAIL_PATTERN);
-            if (result.Success)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return Regex.IsMatch(firstName, NAME_PATTERN);
+        }
+
+        public bool ValidateLastName(String lastName)
+        {
+            return Regex.IsMatch(lastName, NAME_PATTERN);
+        }
+
+        public bool ValidateEmail(String email)
+        {
+            return Regex.IsMatch(email, EMAIL_PATTERN);
+        }
+
+        public bool ValidateMobileNoFormat(String phoneNumber)
+        {
+            return Regex.IsMatch(phoneNumber, MOBILENOFORMAT_PATTERN);
+        }
+
+        public bool ValidatePassword(String password)
+        {
+            return Regex.IsMatch(password, PASSWORD_PATTERN);
         }
     }
 }
