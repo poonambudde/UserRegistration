@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace User_Registration_Using_Regex
 {
@@ -6,21 +6,33 @@ namespace User_Registration_Using_Regex
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Welcome to User Registration Programs using Regex");
 
             UserRegistration userRegistration = new UserRegistration();
 
-            Console.WriteLine("abc@yahoo.com is :- " + userRegistration.ValidateEmail("abc@yahoo.com"));
-            Console.WriteLine("abc-100@yahoo.com is :- " + userRegistration.ValidateEmail("abc-100@yahoo.com"));
-            Console.WriteLine("abc.100@yahoo.com is :- " + userRegistration.ValidateEmail("abc.100@yahoo.com"));
-            Console.WriteLine("abc111@abc.com is :- " + userRegistration.ValidateEmail("abc111@abc.com"));
-            Console.WriteLine("abc-100@abc.net is :- " + userRegistration.ValidateEmail("abc-100@abc.net"));
-            Console.WriteLine("abc.100@abc.com.au is :- " + userRegistration.ValidateEmail("abc.100@abc.com.au"));
-            Console.WriteLine("abc111@abc.com is :- " + userRegistration.ValidateEmail("abc111@abc.com"));
-            Console.WriteLine("abc@1.com is :- " + userRegistration.ValidateEmail("abc@1.com"));
-            Console.WriteLine("abc@gmail.com.com is :- " + userRegistration.ValidateEmail("abc@gmail.com.com"));
-            Console.WriteLine("abc+100@gmail.com is :- " + userRegistration.ValidateEmail("abc+100@gmail.com"));
+            Console.WriteLine("Enter the first name = ");
+            string firstName = Console.ReadLine();
+            Console.WriteLine(userRegistration.ValidateFirstName(firstName));
+
+            Console.WriteLine("Enter the last name = ");
+            string lastName = Console.ReadLine();
+            Console.WriteLine(userRegistration.ValidateLastName(lastName));
+
+            Console.WriteLine("Enter the email = ");
+            string email = Console.ReadLine();
+            Console.WriteLine(userRegistration.ValidateEmail(email));
+
+            Console.WriteLine("Enter the phoneNumber = ");
+            string phoneNumber = Console.ReadLine();
+            Console.WriteLine(userRegistration.ValidateMobileNoFormat(phoneNumber));
+
+            Console.WriteLine("Enter the password = ");
+            string password = Console.ReadLine();
+            Console.WriteLine(userRegistration.ValidatePassword(password));
+
+            Console.WriteLine("Email sample validator");
+            EmailSamples emailSamples = new EmailSamples();
+            emailSamples.validateEmail();
         }
     }
 }
