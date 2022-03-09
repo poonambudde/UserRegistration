@@ -16,7 +16,7 @@ namespace User_Registration_Using_Regex
             emails.Add("abc-100@yahoo.com");
             emails.Add("abc.100@yahoo.com");
             emails.Add("abc111@abc.com");
-            emails.Add("abc - 100@abc.net");
+            emails.Add("abc-100@abc.net");
             emails.Add("abc.100@abc.com.au");
             emails.Add("abc@1.com");
             emails.Add("abc@gmail.com.com");

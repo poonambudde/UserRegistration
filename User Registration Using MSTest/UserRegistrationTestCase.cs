@@ -6,7 +6,7 @@ namespace User_Registration_Using_MSTest
     [TestClass]
     public class UnitTest1
     {
-        // test case for First Name
+        // UC1-Test case for First Name
         [TestMethod]
         public void GivenWrongFirstName_ShouldReturnFalse()
         {
@@ -32,7 +32,7 @@ namespace User_Registration_Using_MSTest
             Assert.AreEqual(expected, actual);
         }
 
-        // test case for last name
+        // UC2-Test case for last name
         [TestMethod]
         public void GivenWrongLastName_ShouldReturnFalse()
         {
@@ -58,12 +58,12 @@ namespace User_Registration_Using_MSTest
             Assert.AreEqual(expected, actual);
         }
 
-        //Test case for Email
+        // UC3-Test case for Email
         [TestMethod]
         public void GivenWrongEmail_ShouldReturnFalse()
         {
             //Arrange
-            string Email = "poonam@gmail.com";
+            string Email = "Poonam - @gmail.com";
             UserRegistration userRegistration = new UserRegistration();
             bool expected = false;
             //Act
@@ -84,7 +84,7 @@ namespace User_Registration_Using_MSTest
             Assert.AreEqual(expected, actual);
         }
 
-        //Test case for Phone Number
+        // UC4-Test case for Phone Number
         [TestMethod]
         public void GivenWrongPhoneNumber_ShouldReturnFalse()
         {
@@ -110,7 +110,7 @@ namespace User_Registration_Using_MSTest
             Assert.AreEqual(expected, actual);
         }
 
-        // Test case for Password
+        // UC5,UC6,UC7,UC8 - Test case for Password
         [TestMethod]
         public void GivenWrongPassword_ShouldReturnFalse()
         {
@@ -134,6 +134,23 @@ namespace User_Registration_Using_MSTest
             bool actual = userRegistration.ValidatePassword(Password);
             //Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GivenParameterizedTest_ToCheckValidMultipleEntries_ReturnEntryIsSucessful()
+        {
+            RegistrationCheck registrationCheck = new RegistrationCheck();
+            var result = registrationCheck.CheckMultipleEntriesOfEmail("abc@yahoo.com", "abc-100@yahoo.com", "abc@gmail.com.com", "abc+100@gmail.com", "abc@1.com");
+            Assert.AreEqual(result, "Entry is successful");
+        }
+
+
+        [TestMethod]
+        public void GivenParameterizedTest_ToCheckInvalidMultipleEntries_ReturnEntryIsNotSucessful()
+        {
+            RegistrationCheck registrationCheck = new RegistrationCheck();
+            var result = registrationCheck.CheckMultipleEntriesOfEmail("abc", "abc123@gmail.a", "abc@.com.my", "abc123@.com", "abc123@.com.com");
+            Assert.AreEqual(result, "Entry is not successful");
         }
     }
 }
