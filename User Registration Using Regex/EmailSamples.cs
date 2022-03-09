@@ -21,6 +21,7 @@ namespace User_Registration_Using_Regex
             emails.Add("abc@1.com");
             emails.Add("abc@gmail.com.com");
             emails.Add("abc+100@gmail.com");
+
             //Invalid emails
             emails.Add("abc");
             emails.Add("abc@.com.my");

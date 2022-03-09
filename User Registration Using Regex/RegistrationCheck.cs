@@ -8,9 +8,13 @@ namespace User_Registration_Using_Regex
     {
         private string message;
         UserRegistration userRegistration = new UserRegistration();
+
+        // Default Constructor Initializes a new instance of the class.
         public RegistrationCheck()
         {
         }
+
+        // Parameterized Constructor Initializes a new instance of the class.
         public RegistrationCheck(string message)
         {
             this.message = message;
@@ -51,6 +55,7 @@ namespace User_Registration_Using_Regex
                 return "Entry is not successful";
         }
 
+        // Checks the multiple entries of email.
         public string CheckMultipleEntriesOfEmail(string email1, string email2, string email3, string email4, string email5)
         {
             UserRegistration userRegistration = new UserRegistration();

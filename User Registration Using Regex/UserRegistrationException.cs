@@ -6,6 +6,7 @@ namespace User_Registration_Using_Regex
 {
     public class UserRegistrationException : Exception
     {
+        // enum ExceptionType for constants
         public enum ExceptionType
         {
             INVALID_FIRSTNAME,
@@ -15,6 +16,8 @@ namespace User_Registration_Using_Regex
             INVALID_PASSWORD
         }
         private readonly ExceptionType type;
+
+        // Parameterized Constructor Initializes a new instance of the class.
         public UserRegistrationException(ExceptionType type, string message) : base(message)
         {
             this.type = type;

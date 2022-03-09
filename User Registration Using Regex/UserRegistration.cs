@@ -36,5 +36,12 @@ namespace User_Registration_Using_Regex
         {
             return Regex.IsMatch(password, PASSWORD_PATTERN);
         }
+
+        // This is by using lambda expression for validating user entry.
+        public Func<string, bool> IsValidFirstName = firstName => Regex.IsMatch(firstName, NAME_PATTERN);
+        public Func<string, bool> IsValidLastName = lastName => Regex.IsMatch(lastName, NAME_PATTERN);
+        public Func<string, bool> IsValidEmail = email => Regex.IsMatch(email, EMAIL_PATTERN);
+        public Func<string, bool> IsValidMobileNumber = phoneNumber => Regex.IsMatch(phoneNumber, MOBILENOFORMAT_PATTERN);
+        public Func<string, bool> IsValidPassword = Password => Regex.IsMatch(Password, PASSWORD_PATTERN);
     }
 }
