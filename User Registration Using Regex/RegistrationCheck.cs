@@ -16,35 +16,35 @@ namespace User_Registration_Using_Regex
             if (message.Contains("Happy"))
                 return "Entry is successful";
             else
-                return "Entry is not successful";
+                return "Fails the Entry";
         }
         public string checkForLastName()
         {
             if (message.Contains("Happy"))
                 return "Entry is successful";
             else
-                return "Entry is not successful";
+                return "Fails the Entry";
         }
         public string checkForEmail()
         {
             if (message.Contains("Happy"))
                 return "Entry is successful";
             else
-                return "Entry is not successful";
+                return "Fails the Entry";
         }
         public string checkForMobile()
         {
             if (message.Contains("Happy"))
                 return "Entry is successful";
             else
-                return "Entry is not successful";
+                return "Fails the Entry";
         }
         public string checkForPassword()
         {
             if (message.Contains("Happy"))
                 return "Entry is successful";
             else
-                return "Entry is not successful";
+                return "Fails the Entry";
         }
     }
 }
