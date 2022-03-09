@@ -7,6 +7,7 @@ namespace User_Registration_Using_Regex
     public class RegistrationCheck
     {
         private string message;
+        UserRegistration userRegistration = new UserRegistration();
         public RegistrationCheck()
         {
         }
@@ -14,35 +15,35 @@ namespace User_Registration_Using_Regex
         {
             this.message = message;
         }
-        public string checkForFirstName()
+        public string CheckForFirstName()
         {
             if (message.Contains("Happy"))
                 return "Entry is successful";
             else
                 return "Entry is not successful";
         }
-        public string checkForLastName()
+        public string CheckForLastName()
         {
             if (message.Contains("Happy"))
                 return "Entry is successful";
             else
                 return "Entry is not successful";
         }
-        public string checkForEmail()
+        public string CheckForEmail()
         {
             if (message.Contains("Happy"))
                 return "Entry is successful";
             else
                 return "Entry is not successful";
         }
-        public string checkForMobile()
+        public string CheckForPhoneNumber()
         {
             if (message.Contains("Happy"))
                 return "Entry is successful";
             else
                 return "Entry is not successful";
         }
-        public string checkForPassword()
+        public string CheckForPassword()
         {
             if (message.Contains("Happy"))
                 return "Entry is successful";
@@ -62,6 +63,62 @@ namespace User_Registration_Using_Regex
                 return "Entry is successful";
             else
                 return "Entry is not successful";
+        }
+
+        public void CheckFirstName(string firstName)
+        {
+            if (userRegistration.ValidateFirstName(firstName))
+            {
+                Console.WriteLine("First Name is valid");
+            }
+            else
+            {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_FIRSTNAME, "Invalid First Name Format");
+            }
+        }
+        public void CheckLastName(string lastName)
+        {
+            if (userRegistration.ValidateLastName(lastName))
+            {
+                Console.WriteLine("Last Name is valid");
+            }
+            else
+            {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_LASTNAME, "Invalid Last Name Format");
+            }
+        }
+        public void CheckEmail(string email)
+        {
+            if (userRegistration.ValidateEmail(email))
+            {
+                Console.WriteLine("email is valid");
+            }
+            else
+            {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_EMAIL, "Invalid Email Format");
+            }
+        }
+        public void CheckMobile(string phoneNumber)
+        {
+            if (userRegistration.ValidateMobileNoFormat(phoneNumber))
+            {
+                Console.WriteLine("mobileNo format is valid");
+            }
+            else
+            {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_MOBILE_NUMBER, "Invalid Mobile Number Format");
+            }
+        }
+        public void CheckPassword(string Password)
+        {
+            if (userRegistration.ValidatePassword(Password))
+            {
+                Console.WriteLine("password format is valid");
+            }
+            else
+            {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.INVALID_PASSWORD, "Invalid Password Format");
+            }
         }
     }
 }
