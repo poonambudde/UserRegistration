@@ -4,7 +4,7 @@ using User_Registration_Using_Regex;
 namespace User_Registration_Using_MSTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UserRegistrationTestCase
     {
         // UC1-Test case for First Name
         [TestMethod]
@@ -19,6 +19,7 @@ namespace User_Registration_Using_MSTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void GivenCorrectFirstName_ShouldReturnTrue()
         {
@@ -31,6 +32,7 @@ namespace User_Registration_Using_MSTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
 
         // UC2-Test case for last name
         [TestMethod]
@@ -45,6 +47,7 @@ namespace User_Registration_Using_MSTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void GivenCorrectLastName_ShouldReturnTrue()
         {
@@ -57,6 +60,7 @@ namespace User_Registration_Using_MSTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
 
         // UC3-Test case for Email
         [TestMethod]
@@ -71,6 +75,7 @@ namespace User_Registration_Using_MSTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void GivenCorrectEmail_ShouldReturnTrue()
         {
@@ -84,12 +89,13 @@ namespace User_Registration_Using_MSTest
             Assert.AreEqual(expected, actual);
         }
 
+
         // UC4-Test case for Phone Number
         [TestMethod]
         public void GivenWrongPhoneNumber_ShouldReturnFalse()
         {
             //Arrange
-            string phoneNumber = "952911129589";
+            string phoneNumber = "9529111295";
             UserRegistration userRegistration = new UserRegistration();
             bool expected = false;
             //Act
@@ -97,6 +103,7 @@ namespace User_Registration_Using_MSTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void GivenCorrectPhoneNumber_ShouldReturnTrue()
         {
@@ -109,6 +116,7 @@ namespace User_Registration_Using_MSTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
 
         // UC5,UC6,UC7,UC8 - Test case for Password
         [TestMethod]
@@ -123,6 +131,7 @@ namespace User_Registration_Using_MSTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void GivenCorrectPassword_ShouldReturnTrue()
         {
@@ -136,6 +145,8 @@ namespace User_Registration_Using_MSTest
             Assert.AreEqual(expected, actual);
         }
 
+
+        // UC9-Test case for multiple Emails
         [TestMethod]
         public void GivenParameterizedTest_ToCheckValidMultipleEntries_ReturnEntryIsSucessful()
         {
@@ -143,7 +154,6 @@ namespace User_Registration_Using_MSTest
             var result = registrationCheck.CheckMultipleEntriesOfEmail("abc@yahoo.com", "abc-100@yahoo.com", "abc@gmail.com.com", "abc+100@gmail.com", "abc@1.com");
             Assert.AreEqual(result, "Entry is successful");
         }
-
 
         [TestMethod]
         public void GivenParameterizedTest_ToCheckInvalidMultipleEntries_ReturnEntryIsNotSucessful()
