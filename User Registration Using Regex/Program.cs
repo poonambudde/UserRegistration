@@ -27,7 +27,7 @@ namespace User_Registration_Using_Regex
             Console.WriteLine(userRegistration.ValidateMobileNoFormat(phoneNumber));
 
             Console.WriteLine("Enter the password = ");
-            string password = Console.ReadLine(); 
+            string password = Console.ReadLine();
             Console.WriteLine(userRegistration.ValidatePassword(password));
 
             Console.WriteLine("Email sample validator");
